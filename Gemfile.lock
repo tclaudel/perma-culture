@@ -251,6 +251,7 @@ GEM
     rspec-support (3.8.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.2)
+    rufo (0.6.0)
     sass (3.7.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -293,6 +294,8 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
+    trix (0.10.1)
+      rails
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
@@ -340,12 +343,14 @@ DEPENDENCIES
   rails (~> 5.2.2)
   rails-controller-testing
   rspec-rails
+  rufo
   sass-rails (~> 5.0)
   selenium-webdriver
   shoulda-matchers (= 4.0.0.rc1)
   spring
   spring-watcher-listen (~> 2.0.0)
   table_print
+  trix
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)

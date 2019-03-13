@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white fixed-top" color-on-scroll="500">
         <div class="container">
             <div class="navbar-translate">
-                <%= link_to root_path, class:"navbar-brand", rel:"tooltip", title:"Perma-culture", data: {placement:"bottom"} do %>
+                <%= link_to posts_path, class:"navbar-brand", rel:"tooltip", title:"Perma-culture", data: {placement:"bottom"} do %>
                    <%# image_tag("logo_catshop2.png", width: "118px") %> Perma-Culture
                 <% end %>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" id='navbar-btn'>
@@ -12,9 +12,9 @@
             </div>
             <div class="collapse navbar-collapse" data-color="black">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <%= link_to posts_path, class:"nav-link" do %><i class="now-ui-icons ui-2_favourite-28"></i><p>PUBLICATIONS</p><% end %>
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
                             <i class="now-ui-icons users_single-02" aria-hidden="true"></i><p>PROFILE</p>

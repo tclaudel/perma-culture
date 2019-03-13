@@ -28,7 +28,7 @@
 
 
 // ------------------------ REPARATION NAVBAR RESPONSIVE ---------------------
-$(document).ready(function() {
+$(document).ready(function () {
     $('#navbar-btn').click(function () {
         $('.collapse').show(500);
     });

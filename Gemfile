@@ -79,3 +79,5 @@ gem 'faker'
 gem 'letter_opener'
 gem 'table_print'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'rufo'
+gem 'trix'

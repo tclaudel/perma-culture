@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = set_user
+		@category = Category.all
 	end
 
   def destroy; end

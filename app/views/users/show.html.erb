@@ -60,17 +60,14 @@
               <h4 class="card-title-center">Catégories</h4>
             </center>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <% @user.categories.each do |category| %>
-              <span class="badge badge-primary"><%= category.name %></span>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-        </div>
-        <div class="col-4">
-        <div class="card">
+          <% @category.each do |category| %>
+          <div>
+            <input type="checkbox" id="category" name="category"
+         checked>
+            <label for="category"><%= category.name %></label>
+          </div>
+         <%end%>      
+         <div class="card">
           <div class="card-header-center">
             <center>
               <h4 class="card-title-center">Posts</h4>
@@ -83,8 +80,13 @@
               <% end %>
             </li>
           </ul>
+          
+
+
         </div>
         </div>
+      
+
       </div>
     </div>
 

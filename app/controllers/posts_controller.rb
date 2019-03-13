@@ -7,10 +7,12 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if current_user.categories.empty?
-      @posts = Post.all.by_latest_comment
+      @posts = Post.all
     else
       @posts = Post.all.by_latest_comment.where(category: current_user.categories)
     end
+    @categories = Category.all
+    @post = Post.new
   end
 
   # GET /posts/1
@@ -33,14 +35,19 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
-    respond_to do |format|
+    @post.category =  Category.find(params[:category])
+    @post.writter = current_user
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        respond_to do |format|
+          format.js
+          format.html do
+              redirect_to @post, notice: 'Post was successfully created.' 
+          end 
+        end
       else
-        format.html { render :new }
+          render :new
+          @post.errors
       end
-    end
   end
 
   # PATCH/PUT /posts/1
