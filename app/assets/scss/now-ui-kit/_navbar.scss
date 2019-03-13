@@ -4,10 +4,12 @@
     min-height: 53px;
     margin-bottom: 20px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    background: #006266;
+    color: $white-color;
+
 
     a{
         vertical-align: middle;
-
         &:not(.btn):not(.dropdown-item){
             color: $white-color;
         }
@@ -19,6 +21,7 @@
         line-height: 1.8em;
         font-size: 1em;
         font-weight: 400;
+        color: $white-color;
     }
 
     &.navbar-absolute{
@@ -26,6 +29,7 @@
         width: 100%;
         padding-top: 10px;
         z-index: 1029;
+
     }
 
     .navbar-nav{
@@ -36,6 +40,7 @@
             margin: 0 auto;
             width: 49px;
             top: -4px;
+
         }
 
         .nav-link.btn{
@@ -55,12 +60,14 @@
             font-size: $font-size-large;
             padding: $padding-base-vertical $padding-base-horizontal;
             line-height: $line-height-nav-link;
-
+            color: $white-color;
 
 
             i.fa + p,
             i.now-ui-icons + p{
                 margin-left: 3px;
+                color: $white-color;
+
             }
 
             i.fa,
@@ -70,11 +77,13 @@
                 top: 3px;
                 text-align: center;
                 width: 21px;
+                color: $white-color;
             }
 
             i.now-ui-icons{
                 top: 4px;
                 font-size: 16px;
+                color: $white-color;
             }
 
             &.profile-photo{
@@ -99,10 +108,10 @@
         }
     }
 
-    // &[class*='navbar-toggleable-'] .container{
-    //     padding-left: 15px;
-    //     padding-right: 15px;
-    // }
+     &[class*='navbar-toggleable-'] .container{
+         padding-left: 15px;
+         padding-right: 15px;
+    }
 
     .logo-container{
         width: 27px;
@@ -154,21 +163,14 @@
     }
 
     &.navbar-transparent{
-        background-color: $transparent-bg !important;
+        //background-color: $transparent-bg !important;
         box-shadow: none;
         color: $white-color;
         padding-top: 20px;
     }
 
     &.bg-white:not(.navbar-transparent){
-        a:not(.dropdown-item):not(.btn){
-            color: $default-color;
-
-            &.disabled{
-                opacity: .5;
-                color: $default-color;
-            }
-        }
+        
 
         .button-bar{
             background: $default-color;
@@ -213,5 +215,5 @@
 }
 
 .bg-white{
-    background-color: $white-colour !important;
+    background-color: #006266 !important;
 }
