@@ -8,5 +8,5 @@ class Comment < ApplicationRecord
 
   validates :content, presence: true
 
-  scope :by_recent_comment, -> { order(created_at: :asc)}
+  scope :by_recent_comment, -> { order(created_at: :asc) }
 end

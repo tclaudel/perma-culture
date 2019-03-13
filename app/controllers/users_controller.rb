@@ -1,22 +1,23 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
+  def index
+    @users = User.all
+  end
 
-	def index
-		@users = User.all
-	end
-
-	def show
-		@user = set_user
-		@category = Category.all
-	end
+  def show
+    @user = set_user
+    @category = Category.all
+  end
 
   def destroy; end
 
-	def edit
-		@user = set_user
-	end
+  def edit
+    @user = set_user
+  end
 
-	def update
-		@user = set_user
+  def update
+    @user = set_user
 
     if @user.update(post_params)
       flash[:success] = 'Profile updated'
@@ -28,11 +29,11 @@ class UsersController < ApplicationController
 
   private
 
-	def set_user
-		User.find(params[:id])
-	end
+  def set_user
+    User.find(params[:id])
+  end
 
-	def post_params
-      params.require(:user).permit(:user_name)
+  def post_params
+    params.require(:user).permit(:user_name)
     end
 end

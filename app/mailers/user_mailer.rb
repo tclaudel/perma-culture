@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 class UserMailer < ApplicationMailer
   default from: 'no-reply@perma-culture.fr'
- 
+
   def welcome_email(user)
-    @user = user 
+    @user = user
 
-    @url  = 'http://monsite.fr/login' 
+    @url  = 'http://monsite.fr/login'
 
-    mail(to: @user.email, subject: 'Bienvenue chez nous !') 
+    mail(to: @user.email, subject: 'Bienvenue chez nous !')
   end
 end
