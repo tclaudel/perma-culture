@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-	before_action only: [:show, :edit]
-
 
 	def index
 		@users = User.all
