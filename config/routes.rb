@@ -2,7 +2,21 @@
 
 Rails.application.routes.draw do
 
-  get 'events/index'
+  namespace :admin do
+      resources :users
+      resources :articles
+      resources :categories
+      resources :comments
+      resources :conversations
+      resources :events
+      resources :likes
+      resources :messages
+      resources :models
+      resources :posts
+      resources :user_categories
+
+      root to: "users#index"
+    end
   devise_for :users, controllers: { registrations: "registrations" }
 
   resources :posts do
