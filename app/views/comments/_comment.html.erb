@@ -3,7 +3,7 @@
         <div class="avatar">
             <%= image_tag comment.user.avatar, class:"media-object img-raised", alt:'Photo commentateur' %>
         </div>
-    <% end -%>
+    <% end %>
 
     <div class="media-body">
         <h5 class="media-heading"><%= comment.user.user_name%>
@@ -14,7 +14,6 @@
                     <%= link_to '', class:'pull-right text-primary', id:"edit-comment-#{comment.id}" do %><i class="now-ui-icons ui-2_settings-90"></i><% end %>
                 </small>
             <% end %>
-
         </h5>
         <p id='comment-content-target-<%=comment.id%>'><%= comment.content%></p>
         <div class="media-body" id='comment-form-target-<%=comment.id%>' style="display:none">
@@ -26,16 +25,15 @@
             <% end %>
         </div>
         <div class="media-footer">
-            <a class="btn btn-primary btn-neutral pull-right" rel="tooltip" title="Repondre au commentaire" id='trigger-form-<%= comment.id %>'>
-                <i class="now-ui-icons ui-1_send"></i> Repondre  <!-- OUVRE LE FORM COMMENT EN DESSOUS et AJOUTE LE COMMENT -->
+            <a class="btn btn-primary btn-neutral pull-right text-primary" rel="tooltip" title="Repondre au commentaire" id='trigger-form-<%= comment.id %>'>
+                <i class="now-ui-icons ui-1_send"></i> Repondre
             </a>
 
             <%= link_to post_likes_path(post_id: 10, comment_id: comment.id), method: :post, remote: true, data: {toggle:"tooltip", placement:"right"}, title:"#{comment.likes.map{|like| like.user.user_name}.join(', ')}" do %>
             <%= button_tag class:"btn btn-danger btn-neutral pull-right" do %>
-            <i class="now-ui-icons ui-2_favourite-28"></i> <span id='count_comment_like_<%=comment.id%>'>
+                <i class="now-ui-icons ui-2_favourite-28"></i> <span id='count_comment_like_<%=comment.id%>'>
                 <%= comment.likes.size %></span><% end %>
-                <%end%>
-
+            <%end%>
             </div>
             <div class="row">
                 <div class="col-12">
